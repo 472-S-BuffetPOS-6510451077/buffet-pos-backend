@@ -12,8 +12,8 @@ services:
     networks:
       - buffet-pos-network
     restart: on-failure
-    
-backend:
+
+  backend:
     build:
       context: .
       dockerfile: docker/prod.Dockerfile
@@ -39,6 +39,7 @@ backend:
 volumes:
   db-data:
     driver: local
+
 networks:
   buffet-pos-network:
     driver: bridge
